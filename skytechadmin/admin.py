@@ -1,0 +1,20 @@
+from django.contrib import admin
+from .models import Mainservice, Subservicename, OurClient
+
+
+class MainserviceAdmin(admin.ModelAdmin):
+    list_display = ('user','main_service_name', 'created_at')
+
+admin.site.register(Mainservice, MainserviceAdmin)
+
+
+class SubserviceAdmin(admin.ModelAdmin):
+    list_display = ('user', 'main_service_name', 'service_name', 'created_at')
+
+admin.site.register(Subservicename, SubserviceAdmin)
+
+
+class OurClientAdmin(admin.ModelAdmin):
+    list_display = ('user', 'client_logo', 'created_at')
+
+admin.site.register(OurClient, OurClientAdmin)
