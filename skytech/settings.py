@@ -87,20 +87,6 @@ WSGI_APPLICATION = 'skytech.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'neondb',
-#         'USER': 'skytech_ownerr',
-#         'PASSWORD': 'npg_AK8vnVRy7QcS',
-#         'HOST': 'ep-patient-firefly-a472w8ff-pooler.us-east-1.aws.neon.tech',
-#         'PORT': '5432',
-#         'OPTIONS': {
-#             'sslmode': 'require',
-#             'options': '-c search_path=myschema,public'
-#         },
-#     }
-# }
 # try:
 #     DATABASE_URL = config('DATABASE_URL')
 #     print("data base", DATABASE_URL)
