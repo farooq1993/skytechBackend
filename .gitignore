@@ -37,9 +37,8 @@ pip-delete-this-directory.txt
 
 # Python environments
 .env
-venv/
-ENV/
-env/
+\env
+\venv
 env.bak/
 venv.balk/
 .pytest_cache/
