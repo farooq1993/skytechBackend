@@ -31,3 +31,16 @@ class OurClient(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     client_logo = models.ImageField(upload_to='clients', null=True, blank=True)
     created_at = models.DateTimeField(auto_now=True, null=True, blank=True)
+
+
+class Career(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    job_title = models.CharField(max_length=100)
+    job_description = RichTextField()
+    job_post_date = models.DateTimeField(auto_created=True, null=True, blank=True)
+    is_active = models.BooleanField(default=True)
+
+
+    def __str__(self):
+        return self.job_title
+    
