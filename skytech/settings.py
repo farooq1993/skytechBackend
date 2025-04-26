@@ -102,12 +102,14 @@ if DATABASE_URL:
     }
 else:
     #fallback, useful for local dev (SQLite)
+    DATABASE_DIR = os.path.join(BASE_DIR, 'db.sqlite3')
     DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': DATABASE_DIR,
+        }
     }
-}
+
 
 
 
