@@ -18,6 +18,7 @@ class Subservicename(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     main_service_name = models.ForeignKey(Mainservice, on_delete=models.CASCADE, null=True, blank=True)
     service_name = models.CharField(max_length=200, null=True, blank=True)
+    service_img = models.ImageField(upload_to='serviceImg', null=True, blank=True)
     about_service = RichTextField()
     created_at = models.DateTimeField(auto_now=True, null=True, blank=True)
 
