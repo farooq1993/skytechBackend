@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'skytech.wsgi.application'
 try:
     DATABASE_URL = config('DATABASE_URL')
 except UndefinedValueError:
-    DATABASE_111URL = None  # Or provide fallback
+    DATABASE_URL = None  # Or provide fallback
 
 if DATABASE_URL:
     DATABASES = {
