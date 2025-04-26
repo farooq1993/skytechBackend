@@ -100,15 +100,15 @@ if DATABASE_URL:
             engine='django.db.backends.postgresql'  # Explicitly set engine
         )
     }
-else:
-    #fallback, useful for local dev (SQLite)
-    DATABASE_DIR = os.path.join(BASE_DIR, 'db.sqlite3')
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': DATABASE_DIR,
-        }
-    }
+# else:
+#     #fallback, useful for local dev (SQLite)
+#     DATABASE_DIR = os.path.join(BASE_DIR, 'db.sqlite3')
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': DATABASE_DIR,
+#         }
+#     }
 
 
 
