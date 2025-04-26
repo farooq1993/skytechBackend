@@ -97,19 +97,9 @@ if DATABASE_URL:
         'default': dj_database_url.parse(
             DATABASE_URL,
             conn_max_age=600,
-            engine='django.db.backends.postgresql'  # Explicitly set engine
+            engine='django.db.backends.postgresql'  
         )
     }
-# else:
-#     #fallback, useful for local dev (SQLite)
-#     DATABASE_DIR = os.path.join(BASE_DIR, 'db.sqlite3')
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': DATABASE_DIR,
-#         }
-#     }
-
 
 
 
