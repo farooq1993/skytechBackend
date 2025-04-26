@@ -61,7 +61,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = ['https://skytechbackend.vercel.app', 'http://127.0.0.1:8000']
 
 ROOT_URLCONF = 'skytech.urls'
 
