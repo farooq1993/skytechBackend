@@ -21,6 +21,33 @@ def registration(request):
     return render(request, 'registration.html')
 
 
+class GetallServices(APIView):
+    def get(self, request):
+        try:
+            all_services = Subservicename.objects.all()
+            serializer = SubserviceSerializer(all_services, many=True)
+            return Response({'data':serializer.data}, status=status.HTTP_200_OK)
+        except Subservicename.DoesNotExist:
+            return Response({'error':serializer.errors}, status=status.HTTP_404_NOT_FOUND)
+
+class Itservices(APIView):
+    """
+    Showing here only IT services 
+    """
+    def get(self, request):
+        category = request.GET.get("category", "IT services")
+        services = Subservicename.objects.filter(main_service_name__main_service_name=category)
+        serializer = SubserviceSerializer(services, many=True)
+        return Response(serializer.data)
+
+class ServiceById(APIView):
+    """
+    Using this api we will get single service
+    """
+    def get(self, request, id):
+        record = Subservicename.objects.get(id=id)
+        serializer = SubserviceSerializer(record)
+        return Response({'data':serializer.data}, status=status.HTTP_200_OK)
 class SubserviceData(APIView):
     def get(self, request,id):
         try:
