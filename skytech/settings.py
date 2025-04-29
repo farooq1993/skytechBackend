@@ -64,6 +64,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",          # for local React dev server
     "http://127.0.0.1:8000",
+    "https://skytechbackend.vercel.app",
 ]
 
 ROOT_URLCONF = 'skytech.urls'
