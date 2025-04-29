@@ -10,4 +10,4 @@ class SubserviceSerializer(serializers.ModelSerializer):
     main_service_name = MainserviceSerializer()
     class Meta:
         model = Subservicename
-        fields = ('main_service_name','service_name', 'service_img','about_service')
+        fields = ('id','main_service_name','service_name', 'service_img','about_service')
