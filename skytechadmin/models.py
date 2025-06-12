@@ -33,7 +33,18 @@ class OurClient(models.Model):
     client_logo = models.ImageField(upload_to='clients', null=True, blank=True)
     created_at = models.DateTimeField(auto_now=True, null=True, blank=True)
 
+class Enquiries(models.Model):
+    first_name = models.CharField(max_length=100, null=True, blank=True)
+    last_name = models.CharField(max_length=100, null=True, blank=True)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+    company_name = models.CharField(max_length=100, null=True, blank=True)
+    title = models.CharField(max_length=100, null=True, blank=True)
+    message = RichTextField()
 
+    def __str__(self):
+        return self.first_name
+    
 class Career(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     job_title = models.CharField(max_length=100)

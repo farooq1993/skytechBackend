@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Mainservice, Subservicename, OurClient, Career
+from .models import Mainservice, Subservicename, OurClient, Career, Enquiries
 
 
 class MainserviceAdmin(admin.ModelAdmin):
@@ -24,3 +24,6 @@ class CareerAdmin(admin.ModelAdmin):
     list_display = ('user', 'job_title', 'job_description', 'job_post_date', 'is_active')
 
 admin.site.register(Career, CareerAdmin)
+
+
+admin.site.register(Enquiries)

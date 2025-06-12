@@ -11,3 +11,8 @@ class SubserviceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subservicename
         fields = ('id','main_service_name','service_name', 'service_img','about_service')
+
+class EnquiriesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Enquiries
+        fields = '__all__'
